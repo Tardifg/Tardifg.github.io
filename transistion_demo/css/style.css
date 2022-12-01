@@ -1,0 +1,67 @@
+body {
+    background-color: rgb(66, 70, 76)
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(71, 112, 112);
+    margin: 20px auto;
+    animation-name: square-to-circle;
+    animation-duration: 1.5s;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction:normal;
+    animation-play-state: paused;
+}
+
+.box:hover {
+    animation-play-state: running;
+}
+
+@keyframes square-to-circle {
+    0% {
+        border-radius: 0;
+        background-color: rgb(84, 75, 75);
+        transform: rotate(0deg);
+        left: 0px;
+        
+    }
+    12.5% {
+        border-radius: 50% 0 0 0;
+        transform: rotate(45deg);
+    }
+    25% {
+        border-radius: 50% 50% 0 0;
+        transform: rotate(90deg);
+    }
+    37.5% {
+        border-radius: 50% 50% 50% 0;
+        transform: rotate(135deg);
+    }
+    50% {
+        border-radius: 50% 50% 50% 50%;
+        background-color: rgb(165, 74, 31);
+        transform: rotate(180deg);
+    }
+    62.5% {
+        border-radius: 50% 50% 50% 0;
+        transform: rotate(225deg);
+    }
+    75% {
+        border-radius: 50% 50% 0 0;
+        transform: rotate(270deg);
+    }
+    87.5% {
+        border-radius: 50% 0 0 0;
+        transform: rotate(315deg);
+    }
+    100% {
+        border-radius: 0 0 0 0;
+        transform: rotate(360deg);
+        background-color: rgb(84, 75, 75);
+        left: 100px;
+    }
+
+}
