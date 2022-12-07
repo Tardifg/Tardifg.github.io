@@ -1,0 +1,96 @@
+body {
+    background-color: rgb(85, 83, 90);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1, h2, h4 {
+    font-family:'Courier New', Courier, monospace
+}
+
+h4 {
+    font-size: 20px;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1000px;
+    background-color: white;
+    padding:20px;
+}
+
+pre code {
+    background-color: #eee;
+    border: 1px solid #999;
+    display: block;
+    padding:30px;
+}
+
+a:link {
+    color:red;
+}
+
+a:visited {
+    color:darkorchid;
+}
+
+a:hover {
+    color: darkkhaki;
+}
+
+a:active {
+    color: darkorange;
+}
+
+a.special-link {
+    color: rgb(17, 136, 35);
+
+}
+
+
+.hover-div{
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+}
+
+.hover-div:hover {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+p:first-child {
+    color: red;
+}
+
+p:last-child {
+    font-weight: bold;
+}
+
+.tooltip {
+    background-color: #eee;
+    border: 1px solid #999;
+    padding: 15px;
+}
+
+.tooltip p {
+    display: none;
+    background: yellow;
+}
+
+.tooltip:hover p {
+    display: block;
+}
+
+.pseudo-elements::first-letter {
+    color:rgb(195, 15, 15)
+}
+
+.pseudo-elements::before {
+    content: "READ THIS:";
+    font-weight: bold;
+}
+
+.pseudo-elements::after {
+    content: " - REMEMBER THIS";
+    font-weight: bold;
+}
