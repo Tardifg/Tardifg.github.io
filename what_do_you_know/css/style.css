@@ -1,5 +1,6 @@
 body {
     background-color: rgb(252, 235, 230);
+    height: 100%;
 }
 
 .nav {
@@ -26,22 +27,20 @@ body {
     background-color: rgb(37, 21, 21);
   }
 
+.active {
+    background-color: rgb(33, 34, 61);
+    border: 1px solid rgb(255, 255, 255);
+}
 
-  
 .par1{
  
     position: relative;
-    opacity: 70%;
+    opacity: 100%;
     min-height:600px;
     
     background-attachment: fixed;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-    
-    
-    }
-    
-    .par1 {
-        background-image: url("coder.jpg");
-    }
+      background-image: url("images/code.jpg");
+}
