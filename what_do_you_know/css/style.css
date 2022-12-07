@@ -32,15 +32,4 @@ body {
     border: 1px solid rgb(255, 255, 255);
 }
 
-.par1{
- 
-    position: relative;
-    opacity: 100%;
-    min-height:600px;
-    
-    background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-image: url("images/code.jpg");
-}
+
