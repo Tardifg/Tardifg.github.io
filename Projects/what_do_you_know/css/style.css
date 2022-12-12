@@ -55,3 +55,15 @@ body {
   font-size: 25px;
   letter-spacing: 2px;
 }
+
+.page {
+  background-color: white;
+  height: 500px;
+  width: 100%;
+}
+
+.linear {
+  height: 200px;
+  background-color: red;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(255, 255, 255, 1));
+}
