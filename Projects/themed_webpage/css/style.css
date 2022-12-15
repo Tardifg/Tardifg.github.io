@@ -1,0 +1,46 @@
+body {
+    background-color: white;
+}
+
+.linear {
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.178), rgb(0, 0, 0));
+    width: auto;
+    height: 600px;
+    padding: 10px;
+}
+
+.box {
+    width: 400px;
+    height: 450px;
+    background-color: rgba(168, 66, 66, 0);
+    border-top: 3px solid rgb(239, 216, 220);
+    border-bottom: 3px solid rgb(239, 216, 220);
+    position:relative;
+    left: 20px;
+    top: 20px;
+}
+
+.button {
+    width: 100px;
+    height: 40px;
+    background-color: rgb(78, 13, 13);
+    border: 1px solid white;
+    position: relative;
+    margin-top: 10px;
+    color: white;
+    border-radius: 10px;
+}
+
+
+.button h2:hover {
+    color: firebrick;
+    font-weight: bold;
+    font-size: 12px;
+    top: 3px;
+}
+
+
+
+.page {
+    height: 500px;
+}
