@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tardif | Responsive Demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .menu {
+            width: 100%;
+            height: 47.333px;
+            background-color: rgb(129, 131, 151);
+        }
+
+        .left, .main, .right {
+            float: left;
+        }
+        .left {
+            width: 33%;
+        }
+        .main {
+            width: 34%;
+        }
+        .right {
+            width: 33%;
+        }
+
+        @media (min-width:621px) and (max-width:1000px) {
+            .left {
+                width: 60%;
+            }
+            .main {
+                margin-left: 20%;
+                width: 60%;
+            }
+            .right {
+                margin-left: 40%;
+                width: 60%;
+            }
+            .menu {
+                height: 142px;
+            }
+        }
+        
+        @media only screen and (max-width:620px) {
+            .left, .main, .right {
+                width: 100%;
+            }
+        }
+
+        .navdescr {
+                font-size: 15vw;
+                text-align: center;
+            }
+    </style>
+</head>
+<body>
+<header>
+<div class="menu">
+<div class="left">
+<a role="button" class="btn btn-primary btn-lg btn-block h-100 w-100 m-0 rounded-0" href="index.html">Index</a>
+</div>
+<div class="main">
+<a role="button" class="btn btn-danger btn-lg btn-block h-100 w-100 m-0 rounded-0" href="lorem.html">Lorem</a>
+</div>
+<div class="right">
+<a role="button" class="btn btn-warning btn-lg btn-block h-100 w-100 m-0 rounded-0" href="ipsum.html">Ipsum</a>
+</div>
+</div>
+</header>
+
+<h2 class="navdescr">Resize this Website</h2>
+
+</body>
+
+
+</body>
+</html>
