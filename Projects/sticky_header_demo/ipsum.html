@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tardif | Responsive Demo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            color: gray;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .header {
+            background-color: rgb(159, 160, 169);
+            color:white;
+            text-align: center;
+            padding: 20px;
+        }
+    
+        .left {
+            float: left;
+            width: 20%
+        }
+        
+        .nav a {
+            background-color: darkgray;
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 8px;
+            margin-top: 10px;
+            text-align: center;
+            width: 100%;
+        }
+        
+        .main {
+            float: left;
+            width: 60%;
+            padding: 0 20px;
+        }
+        
+        .right {
+            float: left;
+            width: 20%;
+            background-color: darkgray;
+            color: white;
+            padding: 15px;
+            margin: 10px 0px;
+        }
+        
+        .footer {
+            background-color: darkgray;
+            color: white;
+            padding: 10px;
+            clear: both;
+        }
+        
+        footer {
+            width: 60%;
+            margin: 0 auto;
+        }
+        
+        @media (min-width:621px) and (max-width:1000px) {
+            .main {
+                width: 80%;
+            }
+            .right {
+                width: 100%;
+            }
+        }
+        
+        @media only screen and (max-width:620px) {
+            .left, .main, .right {
+                width: 100%;
+            }
+        }
+        
+        </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>HTML Responsive Web Demo</h1>
+        </div>
+
+        <div class="left">
+            <div class="nav">
+                <a href="index.html">Index</a>
+                <a href="lorem.html">Lorem</a>
+                <a href="ipsum.html">Ipsum</a>
+            </div>
+        </div>
+
+        <div class="main">
+            <h2>Hi and welcome to my website!</h2>
+            <p>Floats, Percentages, and Media Queries. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+
+        <div class="right">
+            <h2>Contact Us</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero esse quam commodi voluptatum quaerat sint iste sequi! Quasi illum veritatis nam ut quam consequuntur porro iusto reiciendis dolorem, pariatur praesentium.</p>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <footer>Web 2 &copy; 2023</footer>
+    </div>
+</body>
+</html>
