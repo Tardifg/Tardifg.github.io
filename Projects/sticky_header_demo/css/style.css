@@ -1,31 +1,128 @@
 * {
     box-sizing: border-box;
 }
+body {
+    overflow-x: hidden;
+}
 
 .navi {
-    position:absolute;
-    top:0;
-    width:100%;
-    z-index:3;
-    margin: 15px 10px;
+    z-index: 3;
+    height: 120px;
     background-color: black;
     color: white;
     display: flex;
     align-items: center;
     position: sticky;
+    top:-50px;
 }
 
 .nav-inner {
     float: left;
     width: 100%;
+    position: sticky;
+    top: 0;
 }
 
 .logo {
     float: left;
     width: 30%;
+    padding: 30px;
+}
+
+.logo img {
+    margin: 0;
+}
+
+nav {
+    float: left;
+    width: 70%;
+    text-align: right;
     padding: 40px;
 }
 
-.logo p {
-    margin: 0;
+nav a {
+    margin-left: 10px;
+    text-decoration: none;
+    color:white;
 }
+
+.video-container {
+    z-index: 1;
+    width:100%;
+    height:75%;
+    overflow:hidden;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.nav{
+    position:absolute;
+    top:0;
+    width:100%;
+    z-index:3;
+    margin: 15px 10px;
+}
+.navleft {
+    width: 60%;
+    float: left
+}
+.navright {
+    float: left;
+    width: 40%;  
+}      
+.navleft a, .navright a{
+     text-decoration:none;
+     padding:10px;
+     color: #fff;
+     font-family: Arial, Helvetica, sans-serif;
+} 
+.navleft a:hover, .navright a:hover{
+    text-decoration: underline;
+}
+.navrightlink {
+    float: right;
+    padding-right: 20px;
+}
+.textfade {
+    position: absolute;
+    font-family: Arial;
+    font-size: 150px;
+    animation: fadeIn 2s;
+    z-index: 2;
+    top:30%;
+    width: 100%;
+    color: white;
+}
+
+@keyframes fadeIn {
+     0% { opacity: 0; }
+     100% { opacity: 1; }
+}
+
+.gallery {
+    width: 100%;
+    padding-top: 20px;
+}
+.imgallery {
+    object-fit: cover;
+    border-radius: 20%;
+    border: 2px solid rgb(223, 208, 208);
+}
+
+.imgleft {
+    float: left;
+    padding-left: 10%;
+}
+
+.imgright {
+    float: right;
+    padding-right: 10%;
+}
+
+@media only screen and (max-width:1012px) {
+    .imgleft, .imgright {
+        display: none;
+    }
+}
+
+
