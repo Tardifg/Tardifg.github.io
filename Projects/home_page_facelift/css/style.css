@@ -49,7 +49,7 @@ nav {
 }
 
 @media only screen and (max-width:1012px) {
-    .secondnav, .navright {
+    #secondnav, .navright {
         display: none;
     }
 }
