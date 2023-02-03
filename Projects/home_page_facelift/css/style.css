@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+nav {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.404);
+    position: fixed;
+    top: 0;
+    transition: top 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    float: left;
+    width: 20%;
+    height: 100%;
+}
+.navright {
+    float: left;
+    width: 80%;
+    height: 100%;
+    text-align: right;
+    margin-right: 10px;
+}
+.navright a {
+    color: #432d7e;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.navright a:not(.notunder):hover {
+    text-decoration: underline;
+}
