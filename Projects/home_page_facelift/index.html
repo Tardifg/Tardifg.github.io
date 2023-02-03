@@ -11,38 +11,18 @@
     <style>
     body {
         margin: 0;
-        background-color: rgb(177, 175, 231);
+        background-color: rgb(255, 255, 255);
         font-family: Arial, Helvetica, sans-serif;
     }
     .backimg {
+        background-image: url(images/NYU\ campus.jpg);
         width: 100%;
-        height: 600px;
         object-fit: cover;
-    }
-    .textfade {
-         position: absolute;
-         font-family: Georgia, 'Times New Roman', Times, serif;
-         animation: fadeIn 1s;
-         top:30%;
-         width: 100%;
-        color: rgb(255, 255, 255);
-    }
-
-    .fadetext {
-        text-align: center;
-        font-size: 200px;
-    }
-
-
-    @keyframes fadeIn {
-     0% {
-        opacity: 0;
-        filter: blur(20px)
-     }
-     100% {
-        opacity: 1;
-        filter: blur(0px)
-    }
+        min-height: 500px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
     </style>
@@ -54,7 +34,7 @@
             <img class="m-2" src="images/nyu-logo3.png" alt="NYU logo" height="40px">
         </div>
         <div class="navright">
-            <a class="notunder text-dark" href="#">Information For:</a>
+            <a class="notunder text-dark">Information For:</a>
             <a href="https://www.nyu.edu/students.html">Students</a>
             <a href="https://www.nyu.edu/faculty.html">Faculty</a>
             <a href="https://www.nyu.edu/alumni.html">Alumni</a>
@@ -62,33 +42,46 @@
             <a href="https://www.nyu.edu/community.html">Community</a>
         </div>
     </nav>
-    <div class="secondnav">
+    <div id="secondnav">
         <a href="https://www.nyu.edu/about.html">About NYU</a>
         <a href="https://www.nyu.edu/admissions.html">Admissions</a>
         <a href="https://www.nyu.edu/academics.html">Academics</a>
         <a href="https://www.nyu.edu/life.html">University Life</a>
         <a href="https://www.nyu.edu/research.html">Research</a>
     </div>
-    <img class="backimg" src="images/NYU campus.jpg" alt="Campus">
-    <div class="textfade">
-        <h1 class="fadetext">NYU</h1>
-    </div>
     </header>
-    <div style="padding:15px 15px 2500px;font-size:30px;margin-top:70px;">
-  <p><b>This example demonstrates how to hide a navbar when the user starts to scroll the page.</b></p>
-  <p>Scroll down this frame to see the effect!</p>
-  <p>Scroll up to show the navbar.</p>
-  <p>Lorem ipsum dolor dummy text sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  <p>Lorem ipsum dolor dummy text sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
+    <div class="backimg">
+    <div class="textfade">
+        <h1 id="htitle" class="fadetext">NYU</h1>
+    </div>
+    </div>
+    <div class="news">
+        <h2>University News</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-8"></div>
+                <div class="col-4"></div>
+                <div class="col-4"></div>
+            </div>
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4"></div>
+                <div class="col-8"></div>
+            </div>
+        </div>
+    </div>
 <script>
     var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
+var element = document.getElementById("htitle");
 var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
     document.getElementById("nav").style.top = "0";
+    document.getElementById("secondnav").style.top = "10%";
   } else {
     document.getElementById("nav").style.top = "-65px";
+    document.getElementById("secondnav").style.top = "0px";
+    element.classList.add("fadeanim");
   }
   prevScrollpos = currentScrollPos;
 }

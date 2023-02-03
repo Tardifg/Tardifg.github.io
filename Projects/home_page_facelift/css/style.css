@@ -3,15 +3,14 @@
 }
 
 nav {
+    background-color: rgb(255, 255, 255);
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.404);
     position: fixed;
     top: 0;
     transition: top 0.3s;
     display: flex;
     align-items: center;
 }
-
 .logo {
     float: left;
     width: 20%;
@@ -24,13 +23,76 @@ nav {
     text-align: right;
     margin-right: 10px;
 }
-.navright a {
-    color: #432d7e;
+.navright a,#secondnav a {
+    color: #171b35;
     text-align: center;
     padding: 15px;
     text-decoration: none;
     font-size: 17px;
+    font-weight: 600;
 }
-.navright a:not(.notunder):hover {
+.navright a:not(.notunder):hover, #secondnav a:hover {
     text-decoration: underline;
+}
+#secondnav {
+    width: 100%;
+    background-color: rgba(207, 201, 230, 0.938);
+    position: fixed;
+    top: 10%;
+    transition: top 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    z-index: 2;
+    border-bottom: 0.1px solid #171b35;
+}
+
+@media only screen and (max-width:1012px) {
+    .secondnav, .navright {
+        display: none;
+    }
+}
+
+.textfade {
+    position: absolute;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    animation: fadeIn 1s;
+    top:30%;
+    width: 100%;
+   color: rgb(255, 255, 255);
+   
+}
+
+.fadetext {
+   text-align: center;
+   font-size: 200px;
+   z-index: 0;
+}
+
+
+@keyframes fadeIn {
+0% {
+   opacity: 0;
+   filter: blur(20px);
+}
+100% {
+   opacity: 1;
+   filter: blur(0px);
+}
+}
+
+.fadeamin{
+   animation: fadeOut 1s;
+}
+
+@keyframes fadeOut {
+   0% {
+   opacity: 1;
+   filter: blur(0px);
+}
+   100% {
+   opacity: 0;
+   filter: blur(20px);
+}
 }
