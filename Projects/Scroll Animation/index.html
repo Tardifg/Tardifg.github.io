@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tardif | Scroll Animation</title>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+    body {
+     background-color: rgb(18, 18, 18);
+     min-height: 1000px;
+    }
+      </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+    <h1 class="title">Scroll Animation</h1>
+    <h3 class="step">Step One:</h3>
+    <p>Add this one line of js we can set a varible for what percentage of the page has been scrolled.</p>
+    <pre>
+        <code>
+    window.addEventListener('scroll', () => {
+    document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+    }, false);
+        </code>
+    </pre>
+    <h3 class="step">Step Two:</h3>
+    <p>Add the following css to any animation to make them be paused and only move in correspondence to the page scrolling.</p>
+    <pre>
+        <code>
+            animation: rotate 1s linear infinite;
+            animation-play-state: paused;
+            animation-delay: calc(var(--scroll) * -1s);
+          
+            animation-iteration-count: 1;
+            animation-fill-mode: both;
+        </code>
+    </pre>
+    </div>
+    <div class="col-6">
+        <div class="page">
+                 <div class="square"></div>
+            </div>
+         </div>
+        </div>
+     </div>
+    </div>
+</body>
+</html>
