@@ -2,6 +2,10 @@
     box-sizing: border-box;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
 
 .indeximage {
     z-index: 1;
@@ -88,5 +92,125 @@
         100% {
         opacity: 0;
         filter: blur(20px);
+    }
+}
+
+
+/*Gallery*/
+.pageload {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    background-color: rgb(255, 77, 77);
+}
+
+.pageload h1 {
+    color: white;
+    font-family: 'RichEatinAllCaps';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 200px;
+}
+
+
+
+#flexg {
+    position: fixed;
+}
+
+.galleryview {
+    position: absolute;
+    width: 800px;
+    height: 500px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    animation: viewslide 1s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+    overflow-y: hidden;
+}
+
+.galleryblock {
+    position: absolute;
+    width: 800px;
+    height: 600px;
+    top: 20px;
+    animation: imgslide 1s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+}
+
+@keyframes viewslide{
+    0% {
+        left: -10%;
+    }
+    93.06% {
+        opacity: 1;
+    }
+    100% {
+        left: 10%;
+        opacity: 0;
+    }
+}
+
+@keyframes imgslide {
+    from {
+        top: 0;
+    }
+    to {
+        top: -7200px
+    }
+}
+
+.pagecolor {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    animation: pagecolor 1s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+}
+
+@keyframes pagecolor {
+    60% {
+        background-color: white;
+    }
+    100% {
+        background-color: wheat;
+    }
+}
+
+@keyframes footerrev {
+    94% {
+        opacity: 0;
+    }
+    95% {
+        opacity: 1;
+    }
+}
+
+
+
+
+/*
+.galleryflex > div {
+    flex: 0 0 auto;
+}
+
+
+/*
+.galleryflex {
+    animation: slide 1s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+}
+
+@keyframes slide{
+    from {
+        left: 40%;
+    }
+    to {
+        left: 50%;
     }
 }
