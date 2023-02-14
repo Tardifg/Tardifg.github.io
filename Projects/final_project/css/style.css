@@ -123,7 +123,7 @@
     position: absolute;
     width: 800px;
     height: 500px;
-    margin-top: 15px;
+    margin-top: 50px;
     margin-bottom: 15px;
     animation: viewslide 1s linear infinite;
     animation-play-state: paused;
@@ -155,9 +155,6 @@
 }
 
 @keyframes imgslide {
-    from {
-        top: 0;
-    }
     to {
         top: -7200px
     }
@@ -181,11 +178,38 @@
     }
 }
 
+#footer {
+    animation: footerrev 1s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+}
+
+.footertext{
+    font-family: 'YahfieNormal';
+    font-size: 15vw;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-style: normal;
+    display: block;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    margin: 0;
+    
+}
+
+.footertext:hover {
+    text-decoration: underline;
+    color: rgb(26, 26, 26);
+}
+
 @keyframes footerrev {
-    94% {
+    0% {
         opacity: 0;
     }
-    95% {
+    98% {
+        opacity: 0;
+    }
+    100% {
         opacity: 1;
     }
 }

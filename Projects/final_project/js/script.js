@@ -28,20 +28,13 @@ window.addEventListener(
   
 
 
-  // Remove the transition class
-const square = document.querySelector('.square');
-square.classList.remove('square-transition');
-
-// Create the observer, same as before:
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      square.classList.add('square-transition');
-      return;
+  window.onscroll = function() {
+    var element = document.getElementById("footer");
+    var scroll = --scroll
+    if (--scroll >  0.99) {
+         element.classList.add("animate__animated animate__fadeInUp");
+         document.getElementById("footer").style.display = "block";
+     } else {
+         document.getElementById("footer").style.display = "block";
     }
-
-    square.classList.remove('square-transition');
-  });
-});
-
-observer.observe(document.querySelector('.square-wrapper'));
+    }
