@@ -8,7 +8,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <style>
+        body {
+            overflow-x: hidden;
+            max-width: 1280px;
+        }
         .indeximage {
             background-image: url("images/tree.jpg");
         }
@@ -17,29 +23,32 @@
 <body>
     <header>
         <nav id="nav">
-                 <div class="navleft">
-                 <a href="#" class="navindex">Logo</a>
-                 </div>
-                 <div class="navright">
-                     <div class="navrightlink">
-                     <a href="gallery.html">Link 1</a>
-                     <a href="#">Link 2</a>
-                     </div>
-                 </div>
+                <div class="navleft">
+                    <a href="#" class="navindex">Logo</a>
+                </div>
+                <div class="navright">
+                    <div class="navrightlink">
+                    <a href="gallery.html">Link 1</a>
+                    <a href="#">Link 2</a>
+                    </div>
+                </div>
          </nav>
     </header>
 
-    <div class="page1">
-         <div class="indeximage"></div>
+    <div class="titepage">
+        <img src="images/tree.jpg" id="indeximage" alt="tree">
          <div class="textfade">
              <h2 class="text-center">Lorem Ipsum</h1>
              <h4 class="text-center">Dolor Sit.</h6>
          </div>
     </div>
-    <div class="page2"></div>
-     <footer></footer>
-     <script>
+    <div class="indexrowgallery">
+        <div class="indexrow firstrow"></div>
+        <div class="indexrow secondrow"></div>
+        <div class="row thirdrow"></div>
+    </div>
 
-     </script>
+    
+    <script src="simpleParallax.js"></script>
 </body>
 </html>

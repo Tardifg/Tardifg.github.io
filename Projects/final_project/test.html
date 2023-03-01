@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tardif | Test</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+body {
+    min-height: 7000px;
+}
+        @keyframes slideInUp {
+  from {
+    background-color: red;
+  }
+  to {
+    background-color: blue;
+  }
+}
+
+.element {
+   margin-top: 2000px;
+   width: 200px;
+   height: 200px;
+   position: absolute;
+   background-color: red;
+  animation: slideInUp 5s ease;
+  animation-play-state: paused;
+}
+
+
+    </style>
+</head>
+<body>
+        <div class="element"></div>
+
+<script>
+const element = document.querySelector('.element');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      element.classList.add('visible');
+    } else {
+      element.classList.remove('visible');
+    }
+  });
+});
+observer.observe(element);
+
+let scrollTimeout;
+
+window.addEventListener('scroll', () => {
+  clearTimeout(scrollTimeout);
+  element.style.animationPlayState = 'running';
+  scrollTimeout = setTimeout(() => {
+    element.style.animationPlayState = 'paused';
+  }, 10);
+});
+
+
+
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var element = document.getElementById("nav");
+var currentScrollPos = window.pageYOffset;
+if (prevScrollpos > currentScrollPos) {
+    document.getElementById("nav").style.display = "none";
+     element.classList.add("outfade");
+     element.classList.remove("infade");
+ } else {
+     document.getElementById("nav").style.display = "inline-block";
+     element.classList.add("infade");
+     element.classList.remove("outfade");
+}
+prevScrollpos = currentScrollPos;
+}
+</script>
+</body>
+</html>
