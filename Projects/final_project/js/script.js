@@ -1,3 +1,7 @@
+var image = document.getElementById('indeximage');
+new simpleParallax(image, {
+  scale: 1.5
+});
 
 window.addEventListener(
     "scroll",
@@ -20,3 +24,15 @@ window.addEventListener(
          document.getElementById("galfooter").style.display = "block";
     }
     }
+
+
+    var elem = document.querySelector('.grid');
+    var msnry = new Masonry( elem, {
+      // options
+      itemSelector: '.grid-item',
+      columnWidth: '.grid-sizer',
+      percentPosition: true
+    });
+
+    AOS.init();
+    w3.includeHTML();

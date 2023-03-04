@@ -12,7 +12,10 @@
     <style>
 body {
     min-height: 7000px;
+    min-width: 7000px;
 }
+
+
         @keyframes slideInUp {
   from {
     background-color: red;
@@ -32,11 +35,23 @@ body {
   animation-play-state: paused;
 }
 
-
+#container {
+    background-color: rgb(27, 199, 73);
+    overflow-x: scroll;
+    white-space: nowrap;
+    width: 100%;
+  }
+  #content {
+    display: inline-block;
+    background-color: red;
+  }
     </style>
 </head>
 <body>
         <div class="element"></div>
+        <div id="container">
+          <div class="content"></div>
+        </div>
 
 <script>
 const element = document.querySelector('.element');
@@ -79,6 +94,15 @@ if (prevScrollpos > currentScrollPos) {
 }
 prevScrollpos = currentScrollPos;
 }
+
+
+
+  const container = document.getElementById('container');
+  container.addEventListener('scroll', function() {
+    const scrollPosition = container.scrollLeft;
+    // do something with scrollPosition
+  });
+
 </script>
 </body>
 </html>
