@@ -4,26 +4,26 @@ new simpleParallax(image, {
 });
 
 window.addEventListener(
-    "scroll",
-    () => {
-      document.body.style.setProperty(
-        "--scroll",
-        window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
-      );
-    },
-    false
-  );
+  "scroll",
+  () => {
+    const maxScrollValue = document.body.offsetHeight - window.innerHeight;
+    const currentScrollValue = window.pageYOffset;
+    const scrollPercentage = currentScrollValue / maxScrollValue;
+
+    if (scrollPercentage >= 0.99) {
+      document.body.style.setProperty("--scroll", "0.99");
+    } else {
+      document.body.style.setProperty("--scroll", scrollPercentage);
+    }
+  },
+  false
+);
+
+
+
   
-  window.onscroll = function() {
-    var element = document.getElementById("galfooter");
-    var scroll = --scroll
-    if (--scroll >  0.99) {
-         element.classList.add("animate__animated animate__fadeInUp");
-         document.getElementById("galfooter").style.display = "block";
-     } else {
-         document.getElementById("galfooter").style.display = "block";
-    }
-    }
+  
+
 
 
     var elem = document.querySelector('.grid');

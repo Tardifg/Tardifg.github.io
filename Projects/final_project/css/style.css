@@ -266,13 +266,14 @@
 /*Footer*/
 
 .footer {
-    position: absolute;
+    position: static;
     max-width: none;
     width: 100%;
     height: auto;
     background-color: rgb(20, 20, 20);
     padding: 0;
     margin: 0;
+    z-index: 1000;
 }
 .topfooter {
     height: 200px;
@@ -292,7 +293,7 @@
     object-fit: contain;
 }
 
-h4, h6, p {
+h1, h2, h3, h4, h5, h6, p {
     font-family: 'Labrada', serif;
     color: white;
 }
@@ -300,3 +301,12 @@ h4, h6, p {
 h4 {
     font-weight: 600;
 }
+
+.footer h4 {
+    font-size: 30px;
+}
+
+.footer {
+    z-index: 1000;
+}
+
