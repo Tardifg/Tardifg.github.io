@@ -9,163 +9,29 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Labrada&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Crimson+Text&family=Labrada&display=swap" rel="stylesheet">
     
     <style>
 
-        * { box-sizing: border-box; }
-
-body {
-  animation: backcolor 1s linear infinite;
-  animation-play-state: paused;
-  animation-delay: calc(var(--scroll) * -1s);
-  height: 5500px;
-}
-
-@keyframes backcolor {
-    70% {
-        background-color: white;
-    }
-
-
-    100% {
-      background-color: black;
-    }
-
-
-}
-  /*Sourced from https://masonry.desandro.com/*/
-/* ---- grid ---- */
-
-.grid {
-  position: absolute;
-  background: #ffffff00;
-  width: 79%;
-  left: 20%;
-  top: 0%;
-  margin: 0;
-}
-
-
-
-/* ---- grid-item ---- */
-
-.grid-sizer,
-.grid-item {
-  width: 50%;
-  overflow: hidden;
-  object-fit: cover;
-}
-
-.grid-item {
-  height: 420px;
-  float: left;
-  background: rgba(255, 255, 255, 0);
-  border: 0px solid #000000;
-  border-radius: 0px;
-  padding: 12px;
-}
-
-.grid-item--height2 { height: 500px; }
-
-
-.sidenav {
-  position: fixed;
-  width: 20%;
-  height: 100%;
-  background-color: rgb(255, 255, 255);
-}
-
-.sidenavlinks {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.sidenavlinks li {
-  padding: 20px;
-}
-
-.sidenavlinks li a{
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-  font-family: 'Labrada', serif;
-  text-transform: uppercase;
-}
-
-.sidenavlinks .sidenavbutton {
-  position: absolute;
-  border: 1px solid black;
-  width: 100px;
-  height: 50px;
-  padding: 10px;
-  left: 75px;
-}
-
-h1 {
-  color: #000000;
-  font-weight: 400;
-  font-size: 3rem;
-  text-transform: uppercase;
-}
-
-h4 {
-  font-size: 10px;
-}
-
-#borderbottom {
-  position: absolute;
-  width: 200px;
-  border-bottom: 1px solid #000000;
-  left: 30px;
-}
-
-@media only screen and (max-width: 1012px) {
-    .sidenav {
-        display: none;
-    }
-    .grid {
-      width: 100%;
-      left: 0%;
-    }
-    .grid-item {
-      padding: 7px;
-    }
-    .firstgalfoot {
-      width: 100%;
-      left: 0%;
-    }    
-}
-
-@media only screen and (min-width: 1012px) {
-  .firstgalfoot {
-  position: absolute;
-  width: 79%;
-  left: 20%;
-  }
-}
-
-
-.firstgalfoot {
-  position: absolute;
-  width: 79%;
-  left: 20%;
-}
     </style>
 </head>
 <body>
   <div class="sidenav">
-    <h1 class="text-center mt-4">Lorem</h1>
+    <h1 class="text-center mt-2 titletext">Kandy Kitchen</h1>
     <div id="borderbottom"></div>
     <ul class="text-center sidenavlinks">
       <li><a href="#">Lorem, ipsum.</a></li>
+      <li><a href="#">Gallery</a></li>
       <li><a href="#">Lorem, ipsum.</a></li>
       <li><a href="#">Lorem, ipsum.</a></li>
-      <li><a href="#">Lorem, ipsum.</a></li>
-      <li><a href="#">Lorem, ipsum.</a></li>
-      <li class="sidenavbutton"><a href="#">See More</a></li>
+      <li><a href="#">Reservations</a></li>
+      <li><a class="sidenavbutton" href="#">See More</a></li>
     </ul>
   </div>
-  <div class="grid">
+  <div class="rightcontent">
+    <div class="grid">
       <div class="grid-sizer"></div>
       <div class="grid-item"><img src="images/hotel.jpg" alt=""></div>
       <div class="grid-item grid-item--width2 grid-item--height2"><img src="images/The-Sound-of-Silence-1800.jpg" alt="" width=""></div>
@@ -190,9 +56,9 @@ h4 {
       <div class="grid-item"><img src="images/tree.jpg" alt=""></div>
       <div class="grid-item"><img src="images/tree.jpg" alt=""></div>
       <div class="grid-item grid-item--height2"><img src="images/tree.jpg" alt=""></div>
-  </div>
+    </div>
 
-  <div class="postgrid">
+    <div class="postgrid">
     <div class="container">
        <div class="row">
           <div class="col-6">
@@ -206,30 +72,82 @@ h4 {
         <div class="col-6"></div>
        </div>
     </div>
-  </div>
-
-  <footer class="firstgalfoot">
-    <div data-aos="fade-up" data-aos-easing="ease-out-sin" class="container w-100 footer">
-        <div class="row topfooter">
-            <div class="col-md-9 col-sm-6 col-xs-12">
-                <h4>Location</h4>
-                <p>Willowbrook Heights</p>
-                <p>456 Oak Avenue,<br> Willowbrook Heights, NY 12345</p>
-                <p>Monday - Sunday:<br>5:00pm - 10:30pm</p>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <div class="logo">
-                    <img src="images/Logo.png" alt="Logo">
-                </div>
-            </div>
-        </div>
-        <div class="row bottomfooter">
-        <div class="borderfoot">
-        <h6 class="text-muted text-center">Amore Mio | &copy Gavin Tardif 2023</h6>
-        </div>
-        </div>
     </div>
-</footer>
+
+  <div class="reservation">
+    <h2 class="text-secondary" id="reservationtitle">Make A Reservation</h2>
+    <form>
+      <h4 class="text-muted text-uppercase mb-2">Name</h4>
+      <div class="row">
+        <div class="col-6 d-inline-block">
+          <input type="text" class="form-control bg-transparent" id="firstname" placeholder="">
+          <label class="text-muted mb-1" for="firstname">First</label>
+        </div>
+        <div class="col-6 d-inline-block">
+          <input type="text" class="form-control bg-transparent" id="lastname" placeholder="">
+          <label class="text-muted mb-1" for="inputPassword4">Last</label>
+        </div>
+      </div>
+      <div class="row mt-4">
+      <div class="col-4">
+        <label class="text-muted text-uppercase mb-1" for="inputAddress">Email</label>
+        <input type="email" class="form-control bg-transparent" id="inputAddress" placeholder="">
+      </div>
+      <div class="col-4">
+      <label class="text-muted text-uppercase mb-1" for="inputAddress">Number of People</label>
+      <select id="inputState" class="form-control bg-transparent"  placeholder="">
+        <option selected disabled>Select an option</option>
+        <option>2 People</option>
+        <option>3 People</option>
+        <option>4 People</option>
+        <option>5 People</option>
+        <option>6 People</option>
+        <option>7 People</option>
+        <option>8 People</option>
+      </select>
+      </div>
+      <div class="col-4">
+        <label class="text-muted text-uppercase mb-1" for="inputdate">Date and Time</label>
+        <input type="email" class="form-control bg-transparent" id="inputdate" placeholder="">
+      </div>
+      </div>
+      <div class="form-group mt-4">
+        <label class="text-muted text-uppercase mb-1" for="inputAddress">Message</label>
+        <textarea type="text" class="form-control bg-transparent" id="inputAddress" placeholder=""></textarea>
+      </div>
+      <button type="button" class="btn btn-light mt-2 text-muted">Submit</button>
+    </form>
+  </div>  
+    <footer class="firstgalfoot">
+      <div data-aos="fade-up" data-aos-easing="ease-out-sin" class="container w-100 footer">
+          <div class="row topfooter">
+              <div class="col-md-9 col-sm-6 col-xs-12">
+                  <h4>Location</h4>
+                  <p>Willowbrook Heights</p>
+                  <p>456 Oak Avenue,<br> Willowbrook Heights, NY 12345</p>
+                  <p>Monday - Sunday:<br>5:00pm - 10:30pm</p>
+             </div>
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                  <div class="logo">
+                      <img src="images/Logo.png" alt="Logo">
+                  </div>
+              </div>
+          </div>
+          <div class="row bottomfooter">
+          <div class="borderfoot">
+          <h6 class="text-muted text-center">Amore Mio | &copy Gavin Tardif 2023</h6>
+          </div>
+          </div>
+      </div>
+    </footer>
+
+
+
+
+
+</div>
+
+
 
   <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
   <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>

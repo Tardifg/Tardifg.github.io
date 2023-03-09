@@ -7,16 +7,231 @@
   }
 
 
-#indeximage {
-    z-index: 1;
-    width:100%;
-    object-fit: cover;
-    margin: 0;
-    max-height: 600px;
-    position: absolute;
-    top:0;
-    left:0;
+        * { box-sizing: border-box; }
+
+body {
+  animation: backcolor 1s linear infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+  height: 5500px;
+  overflow-x: hidden;
 }
+
+@keyframes backcolor {
+    70% {
+        background-color: white;
+    }
+
+
+    100% {
+      background-color: rgb(255, 255, 255);
+    }
+
+
+}
+
+h1, h2, h3, h4, h5, h6, p, label {
+    font-family: 'Labrada', serif;
+    color: white;
+}
+
+.rightcontent {
+  position: absolute;
+  top: 0%;
+  margin: 0;
+}
+
+/*Grid and grid item code sourced from https://masonry.desandro.com/*/
+/* ---- grid ---- */
+.grid {
+  position: absolute;
+  background: #ffffff00;
+  width: 100%;
+  left: 0%;
+  margin: 0;
+}
+
+
+
+/* ---- grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+  width: 50%;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.grid-item {
+  height: 420px;
+  float: left;
+  background: rgba(255, 255, 255, 0);
+  border: 0px solid #000000;
+  border-radius: 0px;
+  padding: 12px;
+}
+
+.grid-item--height2 { height: 500px; }
+
+
+.sidenav {
+  position: fixed;
+  width: 20%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+}
+
+.sidenavlinks {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.sidenavlinks li {
+  padding: 20px;
+}
+
+.sidenavlinks li a{
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-family: 'Labrada', serif;
+  text-transform: uppercase;
+}
+
+.sidenavbutton {
+  position: absolute;
+  border: 1px solid black;
+  width: 110px;
+  height: 30px;
+  padding: 0;
+  left: 27%;
+}
+
+.titletext {
+  color: #000000;
+  font-weight: 400;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+footer h4 {
+  font-size: 10px;
+}
+
+#borderbottom {
+  position: absolute;
+  width: 200px;
+  border-bottom: 1px solid #000000;
+  left: 30px;
+}
+
+@media only screen and (max-width: 1012px) {
+    .sidenav {
+        display: none;
+    }
+    .rightcontent {
+        width: 100%;
+        left: -6px;
+      }
+}
+
+@media only screen and (min-width: 1012px) {
+  .rightcontent {
+    width: 79%;
+    left: 20%;
+  }
+}
+
+
+/*     Reservation      */
+
+
+
+#reservationtitle {
+    position: static;
+    font-weight: 400;
+    font-size: 70px;
+    width: 40%;
+    font-family: 'Crimson Text', serif;
+}
+
+
+
+/*     Form      */
+
+form {
+    position: static;
+    margin: 10px;
+    width: 100%;
+    left: 0%;
+    top: -170px;
+}
+
+form h4 {
+    margin: 0;
+    font-size: 17px;
+
+}
+
+select option {
+    background-color: #00000000;
+  }
+
+  select {
+    background-color: #00000000;
+  }
+
+
+
+/*Footer*/
+
+.footer {
+    position: static;
+    max-width: none;
+    width: 100%;
+    height: auto;
+    background-color: rgb(20, 20, 20);
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+}
+.topfooter {
+    height: 200px;
+    margin: 20px 10% 0;
+}
+
+.borderfoot {
+    margin: auto;
+    width: 80%;
+    border-top: 1px solid rgb(105, 105, 105);
+    padding: 10px;
+}
+
+.logo img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.footer h4 {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.footer {
+    z-index: 1000;
+    left: 5%;
+}
+
+
+
+
+
+
+
+
+
+
+/* NOTE: ALL OF THE FOLLOWING CODE WAS FOR PREVIOUS ITERATIONS OF MY IMAGE GALLERY
 
 #nav{
     position:absolute;
@@ -121,6 +336,8 @@
 
 
 /*Gallery*/
+
+/*
 .pageload {
     position: fixed;
     width: 100%;
@@ -262,50 +479,4 @@
 
 
 
-/*Footer*/
-
-.footer {
-    position: static;
-    max-width: none;
-    width: 100%;
-    height: auto;
-    background-color: rgb(20, 20, 20);
-    padding: 0;
-    margin: 0;
-    z-index: 1000;
-}
-.topfooter {
-    height: 200px;
-    margin: 20px 10% 0;
-}
-
-.borderfoot {
-    margin: auto;
-    width: 80%;
-    border-top: 1px solid rgb(105, 105, 105);
-    padding: 10px;
-}
-
-.logo img {
-    width: 200px;
-    height: 200px;
-    object-fit: contain;
-}
-
-h1, h2, h3, h4, h5, h6, p {
-    font-family: 'Labrada', serif;
-    color: white;
-}
-
-h4 {
-    font-weight: 600;
-}
-
-.footer h4 {
-    font-size: 30px;
-}
-
-.footer {
-    z-index: 1000;
-}
 

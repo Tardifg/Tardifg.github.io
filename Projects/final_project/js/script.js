@@ -1,6 +1,6 @@
-var image = document.getElementById('indeximage');
+var image = document.getElementsByClassName('indeximage');
 new simpleParallax(image, {
-  scale: 1.5
+  scale: 2
 });
 
 window.addEventListener(
@@ -21,11 +21,6 @@ window.addEventListener(
 
 
 
-  
-  
-
-
-
     var elem = document.querySelector('.grid');
     var msnry = new Masonry( elem, {
       // options
@@ -35,4 +30,4 @@ window.addEventListener(
     });
 
     AOS.init();
-    w3.includeHTML();
+    
