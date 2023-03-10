@@ -22,16 +22,22 @@
     <h1 class="text-center mt-2 titletext">Kandy Kitchen</h1>
     <div id="borderbottom"></div>
     <ul class="text-center sidenavlinks">
+      <li><a href="#landingpage">Lorem, ipsum.</a></li>
+      <li><a href="#gallery">Gallery</a></li>
       <li><a href="#">Lorem, ipsum.</a></li>
-      <li><a href="#">Gallery</a></li>
       <li><a href="#">Lorem, ipsum.</a></li>
-      <li><a href="#">Lorem, ipsum.</a></li>
-      <li><a href="#">Reservations</a></li>
+      <li><a href="#reservation">Reservations</a></li>
       <li><a class="sidenavbutton" href="#">See More</a></li>
     </ul>
   </div>
   <div class="rightcontent">
-    <div class="grid">
+    <div class="whitespace"></div>
+    <div id="landingpage">
+      <img src="images/hopper.jpg" class="parralaximg" alt="tree" width="100%" height="700px" style="object-fit: cover;">
+    </div>
+
+
+    <div class="grid" id="gallery">
       <div class="grid-sizer"></div>
       <div class="grid-item"><img src="images/hotel.jpg" alt=""></div>
       <div class="grid-item grid-item--width2 grid-item--height2"><img src="images/The-Sound-of-Silence-1800.jpg" alt="" width=""></div>
@@ -58,27 +64,13 @@
       <div class="grid-item grid-item--height2"><img src="images/tree.jpg" alt=""></div>
     </div>
 
-    <div class="postgrid">
-    <div class="container">
-       <div class="row">
-          <div class="col-6">
-            <h3 class="postgridtitle"></h3>
-            <p class="postgridcontent"></p>
-          </div>
-          <div class="col-6"></div>
-       </div>
-       <div class="row">
-        <div class="col-6"></div>
-        <div class="col-6"></div>
-       </div>
-    </div>
-    </div>
+    <div class="menu"></div>
 
-  <div class="reservation">
-    <h2 class="text-secondary" id="reservationtitle">Make A Reservation</h2>
-    <form>
-      <h4 class="text-muted text-uppercase mb-2">Name</h4>
-      <div class="row">
+  <div id="reservation">
+    <h2 class="text-secondary" id="reservationtitle" data-aos="fade-right">Make A Reservation</h2>
+    <form >
+      <h4 class="text-muted text-uppercase mb-2" data-aos="fade-up">Name</h4>
+      <div class="row" data-aos="fade-up">
         <div class="col-6 d-inline-block">
           <input type="text" class="form-control bg-transparent" id="firstname" placeholder="">
           <label class="text-muted mb-1" for="firstname">First</label>
@@ -88,7 +80,7 @@
           <label class="text-muted mb-1" for="inputPassword4">Last</label>
         </div>
       </div>
-      <div class="row mt-4">
+      <div class="row mt-4" data-aos="fade-up">
       <div class="col-4">
         <label class="text-muted text-uppercase mb-1" for="inputAddress">Email</label>
         <input type="email" class="form-control bg-transparent" id="inputAddress" placeholder="">
@@ -111,13 +103,15 @@
         <input type="email" class="form-control bg-transparent" id="inputdate" placeholder="">
       </div>
       </div>
-      <div class="form-group mt-4">
+      <div class="form-group mt-4" data-aos="fade-up">
         <label class="text-muted text-uppercase mb-1" for="inputAddress">Message</label>
         <textarea type="text" class="form-control bg-transparent" id="inputAddress" placeholder=""></textarea>
       </div>
-      <button type="button" class="btn btn-light mt-2 text-muted">Submit</button>
+      <button type="button" class="btn btn-light mt-2 text-muted" data-aos="fade-up">Submit</button>
     </form>
   </div>  
+
+
     <footer class="firstgalfoot">
       <div data-aos="fade-up" data-aos-easing="ease-out-sin" class="container w-100 footer">
           <div class="row topfooter">

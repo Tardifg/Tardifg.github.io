@@ -37,9 +37,27 @@ h1, h2, h3, h4, h5, h6, p, label {
 
 .rightcontent {
   position: absolute;
+  padding-top: 25px;
   top: 0%;
   margin: 0;
 }
+
+.whitespace {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 23px;
+    background-color: white;
+    z-index: 1000;
+}
+
+/*   Landing Page     */
+
+#landingpage {
+    width: 100%;
+    height: 600px;
+}
+
 
 /*Grid and grid item code sourced from https://masonry.desandro.com/*/
 /* ---- grid ---- */
@@ -49,6 +67,7 @@ h1, h2, h3, h4, h5, h6, p, label {
   width: 100%;
   left: 0%;
   margin: 0;
+  margin-top: 100px;
 }
 
 
@@ -125,13 +144,16 @@ footer h4 {
 }
 
 @media only screen and (max-width: 1012px) {
-    .sidenav {
+    .sidenav, .whitespace {
         display: none;
     }
     .rightcontent {
         width: 100%;
-        left: -6px;
+        left: 0%;
       }
+    .grid {
+        left: -1%;
+    }
 }
 
 @media only screen and (min-width: 1012px) {
@@ -140,6 +162,40 @@ footer h4 {
     left: 20%;
   }
 }
+/*     Menu       */
+
+#fullscreen {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .menu {
+    width: 100%;
+    height: 5000%;
+  }
+
+
+
+
+
+  .btnmenu {
+    color: #D1C4E9;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    height: 175px;
+    width: 175px;
+    border: solid 1px #D1C4E9;
+    border-radius: 175px;
+
+  }
+
+
 
 
 /*     Reservation      */
@@ -161,6 +217,7 @@ footer h4 {
 form {
     position: static;
     margin: 10px;
+    padding-right: 15px;
     width: 100%;
     left: 0%;
     top: -170px;

@@ -1,6 +1,6 @@
-var image = document.getElementsByClassName('indeximage');
+var image = document.getElementsByClassName('parralaximg');
 new simpleParallax(image, {
-  scale: 2
+  scale: 1.25
 });
 
 window.addEventListener(
@@ -31,3 +31,4 @@ window.addEventListener(
 
     AOS.init();
     
+
