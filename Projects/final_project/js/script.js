@@ -1,6 +1,6 @@
 var image = document.getElementsByClassName('parralaximg');
 new simpleParallax(image, {
-  scale: 1.25
+  scale: 1.5
 });
 
 window.addEventListener(
