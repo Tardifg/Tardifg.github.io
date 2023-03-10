@@ -243,6 +243,9 @@ footer h4 {
     .grid-item img {
         width: 400px;
     }
+    .subtitle{
+        margin-top: 140px;
+    }
 }
 
 @media only screen and (min-width: 1012px) {
